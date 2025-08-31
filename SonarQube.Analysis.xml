@@ -4,20 +4,18 @@
     <Property Name="sonar.projectKey">wangkanai_analytics</Property>
     <Property Name="sonar.organization">wangkanai</Property>
     <Property Name="sonar.host.url">https://sonarcloud.io</Property>
-    
+
     <!-- Project Information -->
     <Property Name="sonar.projectName">Analytics</Property>
-    <Property Name="sonar.projectVersion">1.0.0</Property>
-    <Property Name="sonar.projectDescription">Wangkanai Analytics - Comprehensive website tracking for .NET</Property>
-    
+
     <!-- Language Configuration -->
     <Property Name="sonar.language">cs</Property>
     <Property Name="sonar.sourceEncoding">UTF-8</Property>
-    
+
     <!-- Source and Test Paths -->
     <Property Name="sonar.sources">src</Property>
     <Property Name="sonar.tests">tests,benchmark</Property>
-    
+
     <!-- Exclusions -->
     <Property Name="sonar.exclusions">
       **/obj/**,
@@ -31,7 +29,7 @@
       **/packages/**,
       **/artifacts/**
     </Property>
-    
+
     <!-- Test Exclusions -->
     <Property Name="sonar.test.exclusions">
       **/obj/**,
@@ -39,7 +37,7 @@
       **/*.Designer.cs,
       **/*.generated.cs
     </Property>
-    
+
     <!-- Coverage Exclusions -->
     <Property Name="sonar.coverage.exclusions">
       **/Mocks/**,
@@ -50,14 +48,14 @@
       **/*.Designer.cs,
       **/*.generated.cs
     </Property>
-    
+
     <!-- Coverage Configuration -->
     <Property Name="sonar.cs.opencover.reportsPaths">coverage/coverage.opencover.xml</Property>
     <Property Name="sonar.coverageReportPaths">coverage/coverage.opencover.xml</Property>
-    
+
     <!-- Quality Gate -->
     <Property Name="sonar.qualitygate.wait">true</Property>
-    
+
     <!-- Duplication -->
     <Property Name="sonar.cpd.exclusions">
       **/obj/**,
@@ -66,13 +64,13 @@
       **/*.generated.cs,
       **/wwwroot/**
     </Property>
-    
+
     <!-- Analysis Configuration -->
     <Property Name="sonar.dotnet.excludeTestProjects">true</Property>
     <Property Name="sonar.scanner.scanAll">false</Property>
     <Property Name="sonar.verbose">false</Property>
     <Property Name="sonar.scm.disabled">true</Property>
-    
+
     <!-- Branch Configuration -->
     <Property Name="sonar.branch.name">main</Property>
   </Properties>
