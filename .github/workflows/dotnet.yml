@@ -104,32 +104,32 @@ jobs:
 
       - name: SonarCloud Scanner Begin
         run: |
-          # Verify the analysis file exists before running scanner
-          if [ -f "SonarQube.Analysis.xml" ]; then
-            echo "✅ Found SonarQube.Analysis.xml"
-            ls -la SonarQube.Analysis.xml
-          else
-            echo "❌ SonarQube.Analysis.xml not found in workspace"
-            ls -la
-            exit 1
-          fi
-          
+          echo "Starting SonarScanner without XML settings file..."
+
           dotnet sonarscanner begin \
             /o:"wangkanai" \
             /k:"wangkanai_analytics" \
-            /s:"${{ github.workspace }}/SonarQube.Analysis.xml" \
             /v:"${{ env.VERSION }}" \
             /d:sonar.token="${{ secrets.SONAR_TOKEN }}" \
             /d:sonar.host.url="https://sonarcloud.io" \
-            /d:sonar.scanner.skipJreProvisioning=true \
-            /d:sonar.scanner.scanAll=false \
+            /d:sonar.projectName="Analytics" \
+            /d:sonar.language=cs \
+            /d:sonar.sourceEncoding=UTF-8 \
+            /d:sonar.sources=src \
+            /d:sonar.tests="tests,benchmark" \
+            /d:sonar.exclusions="**/obj/**,**/bin/**,**/*.Designer.cs,**/*.generated.cs,**/wwwroot/**,**/node_modules/**,**/.vs/**,**/.git/**,**/packages/**,**/artifacts/**" \
+            /d:sonar.test.exclusions="**/obj/**,**/bin/**,**/*.Designer.cs,**/*.generated.cs" \
+            /d:sonar.coverage.exclusions="**/Mocks/**,**/Tests/**,**/benchmark/**,**/*.Tests.cs,**/*.Benchmark.cs,**/*.Designer.cs,**/*.generated.cs" \
             /d:sonar.cs.opencover.reportsPaths=coverage/coverage.opencover.xml \
+            /d:sonar.coverageReportPaths=coverage/coverage.opencover.xml \
+            /d:sonar.qualitygate.wait=true \
+            /d:sonar.cpd.exclusions="**/obj/**,**/bin/**,**/*.Designer.cs,**/*.generated.cs,**/wwwroot/**" \
+            /d:sonar.dotnet.excludeTestProjects=true \
+            /d:sonar.scanner.scanAll=false \
             /d:sonar.verbose=false \
             /d:sonar.scm.disabled=true \
-            /d:sonar.dotnet.excludeTestProjects=true \
-            /d:sonar.cpd.exclusions="**/wwwroot/**,**/obj/**,**/bin/**" \
-            /d:sonar.exclusions="**/wwwroot/**,**/obj/**,**/bin/**,**/*.Designer.cs,**/*.generated.cs" \
-            /d:sonar.coverage.exclusions="**/Mocks/**,**/Tests/**,**/benchmark/**" \
+            /d:sonar.branch.name=main \
+            /d:sonar.scanner.skipJreProvisioning=true \
             /d:sonar.scanner.metadataFilePath=.sonarqube/out/sonar-project.properties
 
       - name: Restore dependencies
