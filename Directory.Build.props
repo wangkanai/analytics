@@ -1,0 +1,43 @@
+<Project>
+   <PropertyGroup>
+      <VersionPrefix>2.4.0</VersionPrefix>
+      <Title>Wangkanai Analytics</Title>
+      <Description>Embrace the power of data with Analytics, a .NET Core library for comprehensive website tracking. Delve into insightful statistics, understand your audience better, and make data-driven decisions with ease. From session duration to bounce rate, Analytics transforms raw data into meaningful insights.</Description>
+      <PackageTags>aspnetcore;analytics;</PackageTags>
+
+      <Company>Wangkanai</Company>
+      <Authors>Sarin Na Wangkanai</Authors>
+      <Copyright>©2014-2025 Sarin Na Wangkanai, All rights reserved</Copyright>
+
+      <RepositoryType>git</RepositoryType>
+      <RepositoryUrl>git://github.com/wangkanai/analytics</RepositoryUrl>
+      <PackageProjectUrl>https://github.com/wangkanai/analytics</PackageProjectUrl>
+      <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+   </PropertyGroup>
+
+   <PropertyGroup>
+      <TargetFramework>net9.0</TargetFramework>
+      <Nullable>enable</Nullable>
+      <ImplicitUsings>enable</ImplicitUsings>
+
+      <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+      <PublishRepositoryUrl>true</PublishRepositoryUrl>
+      <EmbedUntrackedSources>true</EmbedUntrackedSources>
+      <IncludeSymbols>true</IncludeSymbols>
+      <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+   </PropertyGroup>
+
+   <PropertyGroup>
+      <RepoRoot Condition=" '$(RepoRoot)' == '' OR !HasTrailingSlash('$(RepoRoot)') ">$(MSBuildThisFileDirectory)</RepoRoot>
+   </PropertyGroup>
+
+   <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Wangkanai.Analytics'">
+      <PackageIcon>wangkanai-logo.png</PackageIcon>
+      <PackageReadmeFile>README.md</PackageReadmeFile>
+   </PropertyGroup>
+
+   <ItemGroup Condition="'$(MSBuildProjectName)' == 'Wangkanai.Analytics'">
+      <None Include="$(RepoRoot)\Assets\wangkanai-logo.png" Pack="true" PackagePath="\"/>
+      <None Include="$(RepoRoot)\README.md" Pack="true" PackagePath="\"/>
+   </ItemGroup>
+</Project>

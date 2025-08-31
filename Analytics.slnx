@@ -1,0 +1,34 @@
+<Solution>
+  <Folder Name="/.claude/">
+    <File Path=".repomixignore" />
+    <File Path="repomix.config.json" />
+  </Folder>
+  <Folder Name="/.github/">
+    <File Path=".github\FUNDING.yml" />
+    <File Path=".github\RELEASE.yml" />
+    <File Path=".github\workflows\dotnet.yml" />
+  </Folder>
+  <Folder Name="/.solutions/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="md-styles.css" />
+    <File Path="LICENSE" />
+    <File Path="SonarQube.Analysis.xml" />
+    <File Path="Directory.Packages.props" />
+    <File Path="build.ps1" />
+    <File Path="sign.ps1" />
+    <File Path="testconfig.json" />
+    <File Path="INSTALL.md" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/benchmark/">
+    <Project Path="benchmark\Wangkanai.Analytics.Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests\Wangkanai.Analytics.Tests.csproj" />
+  </Folder>
+  <Project Path="src\Wangkanai.Analytics.csproj" />
+</Solution>
