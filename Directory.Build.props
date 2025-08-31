@@ -31,15 +31,6 @@
       <RepoRoot Condition=" '$(RepoRoot)' == '' OR !HasTrailingSlash('$(RepoRoot)') ">$(MSBuildThisFileDirectory)</RepoRoot>
    </PropertyGroup>
 
-   <!-- Analytics-specific properties -->
-   <PropertyGroup>
-      <VersionPrefix>1.0.0</VersionPrefix>
-      <Title>Wangkanai Analytics</Title>
-      <Description>Embrace the power of data with Analytics, a .NET Core library for comprehensive website tracking. Delve into insightful statistics, understand your audience better, and make data-driven decisions with ease. From session duration to bounce rate, Analytics transforms raw data into meaningful insights.</Description>
-      <PackageTags>aspnetcore;analytics;tracking;statistics;data-driven</PackageTags>
-      <RootNamespace>Wangkanai.Analytics</RootNamespace>
-   </PropertyGroup>
-
    <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Wangkanai.Analytics'">
       <PackageIcon>wangkanai-logo.png</PackageIcon>
       <PackageReadmeFile>README.md</PackageReadmeFile>
