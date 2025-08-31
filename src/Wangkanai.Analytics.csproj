@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
    <ItemGroup>
-      <FrameworkReference Include="Microsoft.AspNetCore.App" />
+      <FrameworkReference Include="Microsoft.AspNetCore.App"/>
    </ItemGroup>
 
    <ItemGroup>
-      <PackageReference Include="Wangkanai.Detection" />
-      <PackageReference Include="Wangkanai.Hosting" />
+      <PackageReference Include="Wangkanai.System"/>
+      <PackageReference Include="Wangkanai.Hosting"/>
+      <PackageReference Include="Wangkanai.Detection"/>
    </ItemGroup>
 </Project>

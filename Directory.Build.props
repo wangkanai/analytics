@@ -1,52 +1,52 @@
 <Project>
-  <PropertyGroup>
-    <Company>Wangkanai</Company>
-    <Authors>Sarin Na Wangkanai</Authors>
-    <Copyright>©2014-2025 Sarin Na Wangkanai, All rights reserved</Copyright>
+   <PropertyGroup>
+      <VersionPrefix>2.4.0</VersionPrefix>
+      <Title>Wangkanai Analytics</Title>
+      <Description>Embrace the power of data with Analytics, a .NET Core library for comprehensive website tracking. Delve into insightful statistics, understand your audience better, and make data-driven decisions with ease. From session duration to bounce rate, Analytics transforms raw data into meaningful insights.</Description>
+      <PackageTags>aspnetcore;analytics;</PackageTags>
 
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/wangkanai/analytics</RepositoryUrl>
+      <Company>Wangkanai</Company>
+      <Authors>Sarin Na Wangkanai</Authors>
+      <Copyright>©2014-2025 Sarin Na Wangkanai, All rights reserved</Copyright>
 
-    <PackageProjectUrl>https://github.com/wangkanai/analytics</PackageProjectUrl>
-    <PackageLicense>https://github.com/wangkanai/analytics/blob/main/LICENSE</PackageLicense>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-  </PropertyGroup>
+      <RepositoryType>git</RepositoryType>
+      <RepositoryUrl>git://github.com/wangkanai/analytics</RepositoryUrl>
+      <PackageProjectUrl>https://github.com/wangkanai/analytics</PackageProjectUrl>
+      <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+   </PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+   <PropertyGroup>
+      <TargetFramework>net9.0</TargetFramework>
+      <Nullable>enable</Nullable>
+      <ImplicitUsings>enable</ImplicitUsings>
 
-  <PropertyGroup>
-    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-  </PropertyGroup>
+      <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+      <PublishRepositoryUrl>true</PublishRepositoryUrl>
+      <EmbedUntrackedSources>true</EmbedUntrackedSources>
+      <IncludeSymbols>true</IncludeSymbols>
+      <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+   </PropertyGroup>
 
-  <PropertyGroup>
-    <RepoRoot Condition=" '$(RepoRoot)' == '' OR !HasTrailingSlash('$(RepoRoot)') ">$(MSBuildThisFileDirectory)</RepoRoot>
-  </PropertyGroup>
+   <PropertyGroup>
+      <RepoRoot Condition=" '$(RepoRoot)' == '' OR !HasTrailingSlash('$(RepoRoot)') ">$(MSBuildThisFileDirectory)</RepoRoot>
+   </PropertyGroup>
 
-  <!-- Analytics-specific properties -->
-  <PropertyGroup>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <Title>Wangkanai Analytics</Title>
-    <Description>Embrace the power of data with Analytics, a .NET Core library for comprehensive website tracking. Delve into insightful statistics, understand your audience better, and make data-driven decisions with ease. From session duration to bounce rate, Analytics transforms raw data into meaningful insights.</Description>
-    <PackageTags>aspnetcore;analytics;tracking;statistics;data-driven</PackageTags>
-    <RootNamespace>Wangkanai.Analytics</RootNamespace>
-  </PropertyGroup>
+   <!-- Analytics-specific properties -->
+   <PropertyGroup>
+      <VersionPrefix>1.0.0</VersionPrefix>
+      <Title>Wangkanai Analytics</Title>
+      <Description>Embrace the power of data with Analytics, a .NET Core library for comprehensive website tracking. Delve into insightful statistics, understand your audience better, and make data-driven decisions with ease. From session duration to bounce rate, Analytics transforms raw data into meaningful insights.</Description>
+      <PackageTags>aspnetcore;analytics;tracking;statistics;data-driven</PackageTags>
+      <RootNamespace>Wangkanai.Analytics</RootNamespace>
+   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Wangkanai.Analytics'">
-    <PackageIcon>wangkanai-logo.png</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-  </PropertyGroup>
+   <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Wangkanai.Analytics'">
+      <PackageIcon>wangkanai-logo.png</PackageIcon>
+      <PackageReadmeFile>README.md</PackageReadmeFile>
+   </PropertyGroup>
 
-  <ItemGroup Condition="'$(MSBuildProjectName)' == 'Wangkanai.Analytics'">
-    <None Include="$(RepoRoot)Assets\wangkanai-logo.png" Pack="true" PackagePath="\"/>
-    <None Include="$(RepoRoot)README.md" Pack="true" PackagePath="\"/>
-  </ItemGroup>
+   <ItemGroup Condition="'$(MSBuildProjectName)' == 'Wangkanai.Analytics'">
+      <None Include="$(RepoRoot)Assets\wangkanai-logo.png" Pack="true" PackagePath="\"/>
+      <None Include="$(RepoRoot)README.md" Pack="true" PackagePath="\"/>
+   </ItemGroup>
 </Project>

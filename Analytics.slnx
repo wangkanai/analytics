@@ -21,19 +21,14 @@
     <File Path="build.ps1" />
     <File Path="sign.ps1" />
     <File Path="testconfig.json" />
-  </Folder>
-  <Folder Name="/Analytics/">
-    <Project Path="benchmark\Wangkanai.Analytics.Benchmark.csproj" />
-    <Project Path="src\Wangkanai.Analytics.csproj" />
-    <Project Path="tests\Wangkanai.Analytics.Tests.csproj" />
-    <File Path="README.md" />
     <File Path="INSTALL.md" />
+    <File Path="README.md" />
   </Folder>
-  <Folder Name="/Assets/">
-    <File Path="Assets\wangkanai-logo.afdesign" />
-    <File Path="Assets\wangkanai-logo.svg" />
-    <File Path="Assets\wangkanai-logo.ico" />
-    <File Path="Assets\wangkanai-logo.png" />
-    <File Path="Assets\wangkanai-logo-large.png" />
+  <Folder Name="/benchmark/">
+    <Project Path="benchmark\Wangkanai.Analytics.Benchmark.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests\Wangkanai.Analytics.Tests.csproj" />
+  </Folder>
+  <Project Path="src\Wangkanai.Analytics.csproj" />
 </Solution>
