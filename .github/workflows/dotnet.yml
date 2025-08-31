@@ -103,27 +103,24 @@ jobs:
         shell: bash
 
       - name: SonarCloud Scanner Begin
-        run: |
-          echo "Starting SonarScanner without XML settings file..."
-
-          dotnet sonarscanner begin \
-            /o:"wangkanai" \
-            /k:"wangkanai_analytics" \
-            /v:"${{ env.VERSION }}" \
-            /s:${{ github.workspace }}/SonarQube.Analysis.xml
-            /d:sonar.token="${{ secrets.SONAR_TOKEN }}" \
-            /d:sonar.host.url="https://sonarcloud.io" \
-            /d:sonar.host.url="https://sonarcloud.io"
-            /d:sonar.scanner.skipJreProvisioning=true
-            /d:sonar.scanner.scanAll=false
-            /d:sonar.cs.opencover.reportsPaths=coverage/coverage.opencover.xml
-            /d:sonar.verbose=false
-            /d:sonar.scm.disabled=true
-            /d:sonar.dotnet.excludeTestProjects=true
-            /d:sonar.cpd.exclusions="**/wwwroot/**,**/obj/**,**/bin/**"
-            /d:sonar.exclusions="**/wwwroot/**,**/obj/**,**/bin/**,**/*.Designer.cs,**/*.generated.cs"
-            /d:sonar.coverage.exclusions="**/benchmark/**,**/test/**"
-            /d:sonar.scanner.metadataFilePath=.sonarqube/out/sonar-project.properties
+        run: >
+          dotnet sonarscanner begin
+          /o:"wangkanai"
+          /k:"wangkanai_analytics"
+          /v:"${{ env.VERSION }}"
+          /s:${{ github.workspace }}/SonarQube.Analysis.xml
+          /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+          /d:sonar.host.url="https://sonarcloud.io"
+          /d:sonar.scanner.skipJreProvisioning=true
+          /d:sonar.scanner.scanAll=false
+          /d:sonar.cs.opencover.reportsPaths=coverage/coverage.opencover.xml
+          /d:sonar.verbose=false
+          /d:sonar.scm.disabled=true
+          /d:sonar.dotnet.excludeTestProjects=true
+          /d:sonar.cpd.exclusions="**/wwwroot/**,**/obj/**,**/bin/**"
+          /d:sonar.exclusions="**/wwwroot/**,**/obj/**,**/bin/**,**/*.Designer.cs,**/*.generated.cs"
+          /d:sonar.coverage.exclusions="**/benchmark/**,**/test/**"
+          /d:sonar.scanner.metadataFilePath=.sonarqube/out/sonar-project.properties
 
       - name: Restore dependencies
         run: |
