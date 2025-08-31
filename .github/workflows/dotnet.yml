@@ -83,8 +83,7 @@ jobs:
             ~/.sonar/cache
             .sonarqube
           key: ${{ runner.os }}-sonar-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-sonar-
+          restore-keys: ${{ runner.os }}-sonar-
 
       - name: Setup .NET 9.0
         uses: actions/setup-dotnet@v4
