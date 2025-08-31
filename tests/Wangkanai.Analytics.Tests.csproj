@@ -1,10 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
    <ItemGroup>
-      <ProjectReference Include="..\src\Wangkanai.Analytics.csproj" />
-   </ItemGroup>
-
-   <ItemGroup>
      <PackageReference Include="Wangkanai.Testing" />
    </ItemGroup>
 
