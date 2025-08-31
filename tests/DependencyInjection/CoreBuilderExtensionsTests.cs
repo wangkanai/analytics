@@ -3,8 +3,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 
+using Wangkanai.Analytics.Extensions;
 using Wangkanai.Analytics.Services;
-using Wangkanai.Testing;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
