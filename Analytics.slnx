@@ -1,4 +1,5 @@
 <Solution>
+  <Folder Name="/.claude/" />
   <Folder Name="/.github/">
     <File Path=".github\FUNDING.yml" />
     <File Path=".github\RELEASE.yml" />
@@ -18,18 +19,18 @@
     <File Path="sign.ps1" />
     <File Path="testconfig.json" />
   </Folder>
+  <Folder Name="/Analytics/">
+    <Project Path="benchmark\Wangkanai.Analytics.Benchmark.csproj" />
+    <Project Path="src\Wangkanai.Analytics.csproj" />
+    <Project Path="tests\Wangkanai.Analytics.Tests.csproj" />
+    <File Path="README.md" />
+    <File Path="INSTALL.md" />
+  </Folder>
   <Folder Name="/Assets/">
     <File Path="Assets\wangkanai-logo.afdesign" />
     <File Path="Assets\wangkanai-logo.svg" />
     <File Path="Assets\wangkanai-logo.ico" />
     <File Path="Assets\wangkanai-logo.png" />
     <File Path="Assets\wangkanai-logo-large.png" />
-  </Folder>
-  <Folder Name="/Analytics/">
-    <Project Path="src\Wangkanai.Analytics.csproj" />
-    <Project Path="tests\Wangkanai.Analytics.Tests.csproj" />
-    <Project Path="benchmark\Wangkanai.Analytics.Benchmark.csproj" />
-    <File Path="README.md" />
-    <File Path="INSTALL.md" />
   </Folder>
 </Solution>
